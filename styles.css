@@ -1,0 +1,252 @@
+:root {
+  color-scheme: light;
+  --text: #26313b;
+  --heading: #20262d;
+  --muted: #626c77;
+  --link: #2265ad;
+  --border: #e6e9ed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  align-items: start;
+  gap: 88px;
+  width: min(1120px, calc(100% - 96px));
+  margin: 88px auto 80px;
+}
+
+.profile-header {
+  text-align: center;
+}
+
+.portrait {
+  display: block;
+  width: 216px;
+  height: 216px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: var(--heading);
+}
+
+h1 {
+  font-size: 31px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  line-height: 1.25;
+}
+
+.affiliation {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.profile-section {
+  margin-top: 32px;
+}
+
+.profile-section + .profile-section {
+  margin-top: 26px;
+}
+
+.profile-section h2 {
+  margin-bottom: 11px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.interests {
+  margin: 0;
+  padding-left: 19px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.interests li + li {
+  margin-top: 5px;
+}
+
+.interests li::marker {
+  color: var(--muted);
+  font-size: 0.75em;
+}
+
+.education {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 23px minmax(0, 1fr);
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.education-icon {
+  width: 23px;
+  height: 23px;
+  margin-top: 1px;
+  color: var(--muted);
+}
+
+.degree {
+  font-weight: 500;
+}
+
+.institution,
+.education-dates {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.institution {
+  margin-top: 3px;
+}
+
+.biography {
+  min-width: 0;
+  padding-top: 3px;
+}
+
+.biography > h2 {
+  margin-bottom: 25px;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.bio-copy {
+  max-width: 650px;
+}
+
+.bio-copy p + p {
+  margin-top: 19px;
+}
+
+.cv-section {
+  margin-top: 29px;
+}
+
+.cv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--link);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+a.cv-link:hover {
+  text-decoration: underline;
+}
+
+a.cv-link:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+.cv-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.cv-status {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+  .homepage {
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 48px;
+    width: calc(100% - 64px);
+    margin-top: 64px;
+  }
+
+  .portrait {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+
+  .homepage {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+    width: calc(100% - 48px);
+    max-width: 480px;
+    margin-top: 40px;
+    margin-bottom: 48px;
+  }
+
+  .portrait {
+    width: 176px;
+    height: 176px;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .profile-section {
+    margin-top: 28px;
+  }
+
+  .biography {
+    border-top: 1px solid var(--border);
+    padding-top: 30px;
+  }
+
+  .biography > h2 {
+    margin-bottom: 20px;
+    font-size: 33px;
+  }
+}

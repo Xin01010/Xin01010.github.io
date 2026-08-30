@@ -1,10 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Xin's Homepage</title>
-</head>
-<body>
-    <h1>Hello, I'm Xin.</h1>
-    <p>Welcome to my personal homepage.</p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Xin Deng is a master's student at Beihang University working on high-performance GNSS software receivers and exploring GPU computing and CUDA.">
+    <title>Xin Deng | Personal Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="homepage">
+      <aside class="profile" aria-label="Profile and academic background">
+        <header class="profile-header">
+          <img
+            class="portrait"
+            src="assets/homepage.jpg"
+            alt="Portrait of Xin Deng"
+            width="216"
+            height="216"
+          >
+          <h1>Xin Deng</h1>
+          <p class="affiliation">Master's Student<br>Beihang University</p>
+        </header>
+
+        <section class="profile-section" aria-labelledby="interests-heading">
+          <h2 id="interests-heading">Interests</h2>
+          <ul class="interests">
+            <li>High-performance GNSS software receivers</li>
+            <li>GPU computing and CUDA</li>
+          </ul>
+        </section>
+
+        <section class="profile-section" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <ul class="education">
+            <li class="education-item">
+              <svg class="education-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m2 9 10-5 10 5-10 5L2 9Z"></path>
+                <path d="M6 11v6c3 3 9 3 12 0v-6M22 9v7"></path>
+              </svg>
+              <div>
+                <p class="degree">Master's in Information and Communication Engineering</p>
+                <p class="institution">Beihang University</p>
+                <p class="education-dates">Sep 2024 - Jun 2027 (expected)</p>
+              </div>
+            </li>
+            <li class="education-item">
+              <svg class="education-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m2 9 10-5 10 5-10 5L2 9Z"></path>
+                <path d="M6 11v6c3 3 9 3 12 0v-6M22 9v7"></path>
+              </svg>
+              <div>
+                <p class="degree">Bachelor's in Electronic Information Science and Technology</p>
+                <p class="institution">Jilin University</p>
+                <p class="education-dates">Sep 2020 - Jun 2024</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <article class="biography" aria-labelledby="bio-heading">
+        <h2 id="bio-heading">Bio</h2>
+        <div class="bio-copy">
+          <p>
+            I am a master's student in Information and Communication Engineering
+            at Beihang University, with expected graduation in June 2027.
+            I received my bachelor's degree in Electronic Information Science
+            and Technology from Jilin University in June 2024.
+          </p>
+          <p>
+            My research focuses on high-performance implementations of Global
+            Navigation Satellite System (GNSS) software receivers. I am also
+            exploring GPU computing and CUDA, including the implementation
+            of the FlashAttention forward pass.
+          </p>
+          <p>
+            I am seeking PhD opportunities to further develop my research
+            in these areas.
+          </p>
+        </div>
+
+        <div class="cv-section">
+          <a class="cv-link" href="assets/Xin-CV.pdf" download="Xin-Deng-CV.pdf" type="application/pdf" aria-describedby="cv-status">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"></path>
+            </svg>
+            <span>Download CV</span>
+          </a>
+          <p id="cv-status" class="cv-status">PDF · Chinese</p>
+        </div>
+      </article>
+    </main>
+  </body>
 </html>
