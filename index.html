@@ -6,8 +6,29 @@
     <meta name="description" content="Xin Deng is a master's student at Beihang University working on high-performance GNSS software receivers and exploring GPU computing and CUDA.">
     <title>Xin Deng | Personal Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
   </head>
-  <body>
+  <body id="top">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="site-title" href="#top">Xin’s Homepage</a>
+        <nav class="tools" aria-label="Page tools">
+          <button class="tool-button" id="search-button" type="button" aria-label="Search this homepage" title="Search (Ctrl/Cmd+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+          <div class="share-wrap">
+            <button class="tool-button" id="share-button" type="button" aria-label="Share this homepage" title="Share" aria-expanded="false" aria-controls="share-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v8h14v-8"/></svg></button>
+            <div class="share-menu" id="share-menu" hidden>
+              <p class="menu-title">Share this homepage</p>
+              <input class="share-url" id="share-url" aria-label="Public homepage address" value="https://xin01010.github.io/" readonly>
+              <button class="menu-item" id="copy-link" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg><span>Copy link</span></button>
+              <button class="menu-item" id="native-share" type="button" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v8h14v-8"/></svg><span>More sharing options</span></button>
+              <p class="menu-hint" id="share-status" role="status">Share your public homepage.</p>
+            </div>
+          </div>
+          <button class="tool-button" id="theme-button" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13.4A8 8 0 0 1 10.6 4 8 8 0 1 0 20 13.4Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg></button>
+        </nav>
+      </div>
+    </header>
+
     <main class="homepage">
       <aside class="profile" aria-label="Profile and academic background">
         <header class="profile-header">
@@ -93,5 +114,17 @@
         </div>
       </article>
     </main>
+
+    <dialog class="search-dialog" id="search-dialog" aria-label="Search this homepage">
+      <div class="search-input-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        <input id="search-input" type="search" placeholder="Search this homepage…" aria-label="Search this homepage" autocomplete="off" spellcheck="false">
+        <button class="search-close" id="close-search" type="button" aria-label="Close search">Esc</button>
+      </div>
+      <div id="search-results" class="search-results"></div>
+      <p class="sr-only" id="search-status" role="status"></p>
+      <div class="search-footer">Searches this page only · Enter to open · Esc to close</div>
+    </dialog>
+    <script src="navbar.js"></script>
   </body>
 </html>
