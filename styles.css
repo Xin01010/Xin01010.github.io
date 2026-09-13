@@ -250,3 +250,12 @@ a.cv-link:focus-visible {
     font-size: 33px;
   }
 }
+.education-item .degree {
+  font-weight: 600;
+}
+
+.education-item .major {
+  margin: 4px 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
